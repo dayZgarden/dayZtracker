@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tracker</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+    src="https://kit.fontawesome.com/c8e4d183c2.js"
+    crossorigin="anonymous"
+    ></script>
+  </head>
+  <header>
+    <nav>
+      <div class="nav__bg">
+        <div class="nav__contents">
+          <div class="nav__top">
+            <div class="nav__left">
+              <img src="./assets/icons8-flat-60.png" class="logo__img" />
+              <h1 class="nav__title">
+                dayZtracker
+              </h1>
+            </div>
+            <div class="nav__right">
+              <a href="index.html" class="nav__right--link link__hover-effect">Home</a>
+              <a href="#reviews" class="nav__right--link link__hover-effect">Reviews</a>
+              <button class="sign-up">
+                <a href="mailto:zyad.alkurdi22@gmail.com" class="nav__right--link colored last">Contact</a>
+              </button>
+              </div>
+            </div>
+            <div class="nav__middle">
+              <h2 class="nav__describe">
+                Add to your Food Diary
+              </h2>
+            </div>
+            <div class="nav__progress-bar">
+              <h2 class="tracking__goal">
+              </h2>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <a href="#">
+      <button class="add__btn" onclick="toggleMeals()">
+        <i class="fas fa-plus"></i>
+      </button>
+    </a>
+    <div class="modal">
+      <form class="modal__form" onsubmit="mealTracker(event)">
+        <h1 class="modal__meals">Add food to your meals</h1>
+        <label for="" class="meals__label">Meal 1 = Breakfast, Meal 2 = Lunch, Meal 3 = Dinner, Meal 4 = Snack</label>
+        <select id="meal" class="meal__choice" required>
+          <option value="meal">Choose your meal period</option>
+          <option value="Breakfast">Breakfast</option>
+          <option value="Lunch">Lunch</option>
+          <option value="Dinner">Dinner</option>
+          <option value="Snack">Snack</option>
+        </select>
+        <div class="foods">
+          <div class="food">
+            <input type="text" placeholder="Food" id = "food" class="option f1" required>
+            <select id="serving" class="serving-size f1" required>
+              <option value="serving">serving</option>
+              <option value="g">g</option>
+              <option value="wt. oz">wt. oz</option>
+              <option value="cup">cup</option>
+            </select>
+            <input type="number" placeholder="Quantity" id="quantity" class="quantity f1" required>
+          </div>
+        </div>
+        <button class="submit__form">
+          Submit
+        </button>
+      </form>
+    </div>
+  <body>
+    <section id="tracking">
+      <div class="container tracking__container">
+        <div class="row">
+          <div class="tracking__contents">
+            <div class="meal__periods">
+              <div class="meal__period">
+                <div class="meal__period--wrapper">
+                  <figure class="meal__img">
+                    <img src="./assets/breakfast.svg" alt="" class="img__bf"/>
+                  </figure>
+                  <div class="meal__bg"></div>
+                  <div class="meal__contents">
+                      <h2 class="meal__period--title">Breakfast</h2>
+                      <ul class="meal__period--contents">
+                      </ul>
+                  </div>
+                </div>
+                <p class="animated__text">
+                  <span class="letter">B</span> <span class="letter">R</span> <span class="letter">E</span><span class="letter">A</span><span class="letter">K</span><span class="letter">F</span><span class="letter">A</span><span class="letter">S</span><span class="letter">T</span>
+                </p>
+              </div>
+              <div class="meal__period">
+                <p class="animated__text">
+                  <span class="letter">L</span> <span class="letter">U</span> <span class="letter">N</span><span class="letter">C</span><span class="letter">H</span>
+                </p>
+                <div class="meal__period--wrapper">
+                  <figure class="meal__img">
+                    <img src="./assets/lunch.svg" alt="" class="img__lunch"/>
+                  </figure>
+                    <div class="meal__bg"></div>
+                    <div class="meal__contents">
+                        <h2 class="meal__period--title">Lunch</h2>
+                        <ul class="meal__period--contents lunch">
+                        </ul>
+                    </div>
+                  </div>
+              </div>
+              <div class="meal__period">
+                <div class="meal__period--wrapper">
+                  <figure class="meal__img">
+                    <img src="./assets/dinner.svg" alt="" class="img__dinner"/>
+                  </figure>
+                    <div class="meal__bg"></div>
+                    <div class="meal__contents">
+                        <h2 class="meal__period--title">Dinner</h2>
+                        <ul class="meal__period--contents">
+                        </ul>
+                    </div>
+                  </div>
+                  <p class="animated__text">
+                    <span class="letter">D</span> <span class="letter">I</span> <span class="letter">N</span><span class="letter">N</span><span class="letter">E</span><span class="letter">R</span>
+                  </p>
+              </div>
+              <div class="meal__period">
+                <p class="animated__text">
+                  <span class="letter">S</span> <span class="letter">N</span> <span class="letter">A</span><span class="letter">C</span><span class="letter">K</span><span class="letter">S</span>
+                </p>
+                <div class="meal__period--wrapper">
+                  <figure class="meal__img">
+                    <img src="./assets/snack.svg" alt="" class="img__snack"/>
+                  </figure>
+                    <div class="meal__bg"></div>
+                    <div class="meal__contents">
+                        <h2 class="meal__period--title">Snack</h2>
+                        <ul class="meal__period--contents">                     
+                        </ul>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="container footer__container">
+          <div class="row">
+            <div class="footer__content">
+              <div class="footer__top">
+                <a href="mailto:zyad.alkurdi22@gmail.com" class="footer__right--link link__hover-effect">Contact</a>
+                <a href="#about-us" class="footer__right--link link__hover-effect">About</a>
+                <a href="#macros" class="footer__right--link link__hover-effect">Macros</a>
+                <a href="#" class="footer__right--link link__hover-effect">Reviews</a>
+              </div>
+              <div class="footer__sep"></div>
+              <div class="footer__bottom">
+                <h1 class="footer__bottom--title">dayZgarden</h1>
+                <img src="./assets/icons8-flat-60.png" class="logo__img footer__img"/>
+                <p class="copyright">
+                  Copyright &copy; 2022. All rights reserved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+
+    <script src="tracker.js"></script>
+  </body> 
+</html>

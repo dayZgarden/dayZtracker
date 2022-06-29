@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Daisy Nutrition</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav__content">
+          <div class="nav__left">
+            <img src="./assets/icons8-flat-60.png" class="logo__img" />
+            <h1 class="nav__title">dayZgarden</h1>
+          </div>
+          <div class="nav__right">
+            <a href="#about-us" class="nav__right--link link__hover-effect">Home</a>
+            <a href="#macros" class="nav__right--link link__hover-effect"
+              >Macros</a
+            >
+            <button class="sign-up">
+              <a href="mailto:zyad.alkurdi22@gmail.com" class="nav__right--link colored last">Contact</a>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <section id="home">
+        <div class="container home__container">
+          <div class="row">
+            <div class="home__contents">
+              <h1 class="home__title colored">
+                Highest rated tracker amongst bodybuilders and nutritionists
+              </h1>
+              <h2 class="home__sub-title">
+                Acheive your <span class="colored">dream</span> physique with
+                <span class="colored">dayZgarden</span>
+              </h2>
+              <form id="form" class="input__wrapper" onsubmit="getCalories(event)">
+                <input
+                  type="number"
+                  class="calorie__input"
+                  placeholder="Input calorie goal"
+                  id = "calorie"
+                />
+                <button class="search">
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </form>
+              <img
+                src="./assets/undraw_through_the_park_lxnl.svg"
+                alt=""
+                class="home__pic"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <section id="about-us">
+      <div class="container">
+        <div class="row">
+          <div class="about__content">
+            <div class="about__left">
+              <h1 class="about__title">About Us!</h1>
+              <h2 class="about__sub-title">
+                We will help you <span class="colored">reach</span> your
+                <span class="colored">goal.</span>
+              </h2>
+              <p class="about__para">
+                With the use of <span class="colored">dayZtracker</span>, we
+                <span class="colored">gurantee results</span> within a week.
+                <br />
+                <br />
+                We will <span class="colored">help</span> keep you on course,
+                and provide <span class="colored">guidance</span> throughout
+                your journey.
+              </p>
+            </div>
+            <div class="about__right">
+              <figure class="about__img--wrapper">
+                <img src="./assets/standout.svg" alt="" class="about__img" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="macros">
+      <div class="container">
+        <div class="row">
+          <h1 class="macro__title">Macros</h1>
+          <div class="icons">
+            <figure class="macro">
+              <img src="./assets/protein.png" class="macro__img" />
+            </figure>
+            <figure class="macro">
+              <img src="./assets/fat.png" class="macro__img" />
+            </figure>
+            <figure class="macro">
+              <img src="./assets/carb.png" class="macro__img" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container footer__container">
+        <div class="row">
+          <div class="footer__content">
+            <div class="footer__top">
+              <a href="mailto:zyad.alkurdi22@gmail.com" class="footer__right--link link__hover-effect">Contact</a>
+              <a href="#about-us" class="footer__right--link link__hover-effect">About</a>
+              <a href="#macros" class="footer__right--link link__hover-effect">Macros</a>
+              <a href="#" class="footer__right--link link__hover-effect">Reviews</a>
+            </div>
+            <div class="footer__sep"></div>
+            <div class="footer__bottom">
+              <h1 class="footer__bottom--title">dayZgarden</h1>
+              <img src="./assets/icons8-flat-60.png" class="logo__img footer__img"/>
+              <p class="copyright">
+                Copyright &copy; 2022. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
