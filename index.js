@@ -10,5 +10,5 @@ function getCalories(event){
 
 function toTracker(calorie){
     localStorage.setItem('calorie', calorie);
-    window.location.href = `http://127.0.0.1:5500/tracker.html`
+    window.location.href = `${window.location.origin}/tracker.html`
 }
