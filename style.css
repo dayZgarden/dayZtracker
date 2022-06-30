@@ -459,6 +459,24 @@ button:active{
 
 */
 
+.total__calories{
+    right:60px;
+    top: 360px;
+    position:fixed;
+    padding: 20px 40px;
+    border-radius:9999px;
+    border:none;
+    box-shadow: 0 20px 80px 0 rgb(0,0,0,0.25);
+    background-color: #9B2335;
+}
+
+.tc{
+    text-align:center;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+}
+
 .add__btn{
     right:40px;
     bottom:40px;
@@ -506,7 +524,8 @@ button:active{
 
 .modal--open nav,
 .modal--open .meal__periods,
-.modal--open .meal__period{
+.modal--open .meal__period,
+.modal--open .total__calories{
     opacity: 0;
     visibility: hidden;
     transition: all 600ms ease;
@@ -514,7 +533,8 @@ button:active{
 
 nav,
 .meal__periods,
-.meal__period{
+.meal__period,
+.total__calories{
     opacity:1;
     visibility: visible;
     transition: all 600ms 800ms;
@@ -576,6 +596,7 @@ nav,
     cursor:pointer;
     color:white;
     font-size:24px;
+    transition: all 450ms ease;
 }
 
 

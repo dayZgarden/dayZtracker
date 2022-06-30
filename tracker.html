@@ -48,10 +48,13 @@
         <i class="fas fa-plus"></i>
       </button>
     </a>
+    <div class="total__calories">
+      <p class="tc"></p>
+    </div>
     <div class="modal">
-      <form class="modal__form" onsubmit="mealTracker(event)">
+      <form class="modal__form" onsubmit="mealTracker(event)" onsubmit="totalCalories(event)">
         <h1 class="modal__meals">Add food to your meals</h1>
-        <label for="" class="meals__label">Meal 1 = Breakfast, Meal 2 = Lunch, Meal 3 = Dinner, Meal 4 = Snack</label>
+        <label for="" class="meals__label">Meal periods: Breakfast, Lunch, Dinner, Snack</label>
         <select id="meal" class="meal__choice" required>
           <option value="meal">Choose your meal period</option>
           <option value="Breakfast">Breakfast</option>
@@ -71,7 +74,7 @@
             <input type="number" placeholder="Quantity" id="quantity" class="quantity f1" required>
           </div>
         </div>
-        <button class="submit__form">
+        <button class="submit__form" onclick="toggleMeals()">
           Submit
         </button>
       </form>
@@ -90,7 +93,7 @@
                   <div class="meal__bg"></div>
                   <div class="meal__contents">
                       <h2 class="meal__period--title">Breakfast</h2>
-                      <ul class="meal__period--contents">
+                      <ul class="meal__period--contents breakfast">
                       </ul>
                   </div>
                 </div>
@@ -122,7 +125,7 @@
                     <div class="meal__bg"></div>
                     <div class="meal__contents">
                         <h2 class="meal__period--title">Dinner</h2>
-                        <ul class="meal__period--contents">
+                        <ul class="meal__period--contents dinner">
                         </ul>
                     </div>
                   </div>
@@ -141,7 +144,7 @@
                     <div class="meal__bg"></div>
                     <div class="meal__contents">
                         <h2 class="meal__period--title">Snack</h2>
-                        <ul class="meal__period--contents">                     
+                        <ul class="meal__period--contents snack">                     
                         </ul>
                     </div>
                   </div>
